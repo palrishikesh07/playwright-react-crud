@@ -2,7 +2,9 @@
 name: Deploy React App
 
 on:
-  push:
+  workflow_run:
+    workflows: ["React CI"]
+    types: [completed]
     branches: [main]
   workflow_dispatch:
 
